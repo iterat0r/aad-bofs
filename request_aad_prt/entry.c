@@ -3,10 +3,10 @@
 #include <winhttp.h>
 
 #ifdef BOF
-#define DYNAMIC_LIB_COUNT
-#include "beacon.h"
-#include "bofdefs.h"
-#include "base.c"
+#define DYNAMIC_LIB_COUNT 3
+#include "../common/beacon.h"
+#include "../common/bofdefs.h"
+#include "../common/base.c"
 #define MSVCRT$wcscpy ((wchar_t* (*)(wchar_t*, const wchar_t*))DynamicLoad("MSVCRT", "wcscpy"))
 #define MSVCRT$wcslen ((size_t (*)(const wchar_t*))DynamicLoad("MSVCRT", "wcslen"))
 #define MSVCRT$strstr ((char* (*)(const char*, const char*))DynamicLoad("MSVCRT", "strstr"))
